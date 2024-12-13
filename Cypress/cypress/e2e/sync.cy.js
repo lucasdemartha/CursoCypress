@@ -27,7 +27,7 @@ describe('Esperas...', () => {
             .type('funciona')
     })
 
-    it('Uso do find', () => {
+    it.skip('Uso do find', () => {
         cy.get('#buttonList').click()
         cy.get('#lista li')
             .find('span')
@@ -36,5 +36,15 @@ describe('Esperas...', () => {
         cy.get('#lista li span')
             .should('contain', 'Item 2')
     })
+
+    it.skip('Uso do timeout', () => {
+        // cy.get('#buttonDelay').click()
+        // cy.get('#novoCampo').should('exist')
+
+        // cy.get('#buttonListDDM').click()
+        // cy.get('#lista li span', { timeout: 30000 })
+        //     .should('have.length', 1)
+    })
+
 
 })
